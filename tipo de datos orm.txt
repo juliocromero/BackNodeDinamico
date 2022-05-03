@@ -1,0 +1,60 @@
+tipo de datos sequelize orm
+
+Sequelize.STRING 		// Cadena, la longitud predeterminada es 255, VARCHAR (255)
+Sequelize.STRING(1234)  // Establecer cadena de longitud, VARCHAR (1234)
+Sequelize.STRING.BINARY   // Definir tipo VARCHAR BINARY
+Sequelize.TEXT           // Cadena larga, texto TEXTO
+Sequelize.TEXT('tiny')   // Cadena de texto pequeña, TINYTEXT
+ 
+Sequelize.INTEGER      // int numero, int
+Sequelize.BIGINT       // Número más grande, BIGINT
+Sequelize.BIGINT(11)   // Establece la longitud del número, BIGINT (11)
+ 
+Sequelize.FLOAT        // Tipo de punto flotante, FLOAT
+Sequelize.FLOAT(11)     // Establece la longitud del punto flotante, FLOAT (11)
+Sequelize.FLOAT(11, 12)  // Establecer la longitud y el número de posiciones decimales del punto flotante, FLOAT (11,12)
+ 
+Sequelize.REAL     //REAL  PostgreSQL only.
+Sequelize.REAL(11) // REAL(11)    PostgreSQL only.
+Sequelize.REAL(11, 12)  // REAL(11,12) PostgreSQL only.
+ 
+Sequelize.DOUBLE     // DOUBLE
+Sequelize.DOUBLE(11)  // DOUBLE(11)
+Sequelize.DOUBLE(11, 12) // DOUBLE(11,12)
+ 
+Sequelize.DECIMAL     // DECIMAL
+Sequelize.DECIMAL(10, 2)  // DECIMAL(10,2)
+ 
+Sequelize.DATE    // Tipo de fecha, DATETIME para mysql / sqlite, TIMESTAMP WITH TIME ZONE para postgres
+Sequelize.DATE(6) // mysql 5.6.4+ es compatible, la precisión de minutos y segundos es de 6 dígitos
+Sequelize.DATEONLY   // fecha solo parte
+Sequelize.BOOLEAN   // tipo int, la longitud es 1, TINYINT (1)
+ 
+Sequelize.ENUM('value 1', 'value 2')  // tipo enumerado
+Sequelize.ARRAY(Sequelize.TEXT)  //PostgreSQL only.
+Sequelize.ARRAY(Sequelize.ENUM)  //  PostgreSQL only.
+ 
+Sequelize.JSON   // JSON column. PostgreSQL, SQLite and MySQL only.
+Sequelize.JSONB  // JSONB column. PostgreSQL only.
+ 
+Sequelize.BLOB   // BLOB (bytea for PostgreSQL)
+Sequelize.BLOB('tiny')  // TINYBLOB (bytea for PostgreSQL. Other options are medium and long)
+ 
+Sequelize.UUID  // El tipo de datos de PostgreSQL y SQLite es UUID y MySQL es de tipo CHAR (36)
+ 
+Sequelize.CIDR  // Tipo de CIDR en PostgreSQL
+Sequelize.INET   // Tipo INET en PostgreSQL
+Sequelize.MACADDR  // Tipo MACADDR en PostgreSQL
+ 
+Sequelize.RANGE(Sequelize.INTEGER)    //PostgreSQL only.
+Sequelize.RANGE(Sequelize.BIGINT)     // PostgreSQL only.
+Sequelize.RANGE(Sequelize.DATE)       //PostgreSQL only.
+Sequelize.RANGE(Sequelize.DATEONLY)   //PostgreSQL only.
+Sequelize.RANGE(Sequelize.DECIMAL)    //PostgreSQL only.
+ 
+Sequelize.ARRAY(Sequelize.RANGE(Sequelize.DATE)) // PostgreSQL only.
+ 
+Sequelize.GEOMETRY   //PostgreSQL (with PostGIS) or MySQL only.
+Sequelize.GEOMETRY('POINT')  // PostgreSQL (with PostGIS) or MySQL only.
+Sequelize.GEOMETRY('POINT', 4326)// PostgreSQL (with PostGIS) or MySQL only.
+Copiar codigo

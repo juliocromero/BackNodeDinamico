@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    /* Language and Environment */
+    "typeRoots": ["node_modules/@types"],
+    "target": "es6",
+    "lib": ["es2016"],
+    /* Modules */
+    "allowJs": true,
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "declaration": false,
+    "noLib": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "jsx": "react",
+    "paths": {
+      "@__tests__/*": ["__tests__/*"],
+      "@apiServices/*": ["src/apiServices/*"],
+      "@database/*": ["src/database/*"],
+      "@routes/*": ["src/routes/*"],
+      "@services/*": ["src/services/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@microservices/*": ["src/microservices/*"],
+      "@servicesProxy/*": ["src/servicesProxy/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "./node_modules/*",
+    "./node_modules/**/*.d.ts",
+    "./node_modules/@types/node/index.d.ts",
+    "babel.config.json",
+    "jest.config.json",
+    "__tests__/**/*-test.ts"
+  ]
+}
